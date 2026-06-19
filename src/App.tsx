@@ -68,7 +68,7 @@ export default function App() {
   }, [todayIso]);
   const calendarStartIso = todayIso;
   const calendarEndIso = finalExamIso;
-  const [selectedDate, setSelectedDate] = useState<string | null>(todayIso);
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
   const subjectsById = useMemo(() => new Map(subjects.map((subject) => [subject.id, subject])), []);
   const scheduleByDate = useMemo(() => new Map(scheduleDays.map((day) => [day.date, day] as const)), []);
